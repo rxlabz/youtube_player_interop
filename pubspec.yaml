@@ -1,6 +1,6 @@
 name: youtube_player_interop
 description: A youtube iframe player wrapper from Dart web applications
-version: 0.1.0
+version: 0.1.0+1
 homepage: https://www.github.com/rxlabz/youtube_player_interop
 author: rxlabz <dev@rxla.bz>
 
