@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>youtube iframe interop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer="" src="main.dart.js"></script>
+    
+</head>
+
+<body>
+
+<h1>Youtube iFrame API for Dart web apps</h1>
+
+<div id="container" class="disabled">
+    <div id="sidepanel" class="col">
+        <div id="searchBar">
+            <label for="fldVideoId">Youtube VideoId</label>
+            <input id="fldVideoId" type="text" value="M7lc1UVf-VE">
+            <button id="btLoad">Load</button>
+        </div>
+        <div class="col">
+            <div id="videoControls" class="disabled row">
+                <button id="btPlay">Play</button>
+                <button id="btPause">Pause</button>
+                <button id="btStop">Stop</button>
+            </div>
+
+        </div>
+        <div id="playerOptions" class="col disabled">
+            <div><input id="chkControls" type="checkbox" checked="">
+                <label for="chkControls">Show controls</label></div>
+            <div><input id="chkInfos" type="checkbox" checked="">
+                <label for="chkInfos">Show infos</label></div>
+            <div><input id="chkAutoplay" type="checkbox">
+                <label for="chkAutoplay">Autoplay</label></div>
+            <p>...</p>
+        </div>
+    </div>
+
+    <div id="video"></div>
+
+</div>
+
+
+
+</body></html>
