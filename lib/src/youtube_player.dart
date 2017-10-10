@@ -5,6 +5,7 @@ import 'package:js/js.dart';
 import 'package:meta/meta.dart';
 
 @JS('Player')
+
 /// https://developers.google.com/youtube/iframe_api_reference#Functions
 class Player {
   external factory Player(String id, PlayerOptions options);
@@ -73,6 +74,7 @@ class Player {
 
 @JS()
 @anonymous
+
 /// https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player
 class PlayerOptions {
   external String get width;
@@ -89,12 +91,11 @@ class PlayerOptions {
   });
 }
 
-
 @JS()
 @anonymous
+
 /// https://developers.google.com/youtube/player_parameters
 class PlayerVars {
-  external int get autohide;
   external int get autoplay;
   external int get cc_load_policy;
   external String get color;
@@ -115,23 +116,33 @@ class PlayerVars {
   external int get rel;
   external int get showinfo;
   external int get start;
-  external String get theme;
 
   external factory PlayerVars({
-    int autohide,
     int autoplay,
     int cc_load_policy,
     String color,
-    int modestbranding,
-    int showinfo,
     int controls,
+    int disablekb,
     int enablejsapi,
+    int end,
+    int fs,
+    int iv_load_policy,
+    String list,
+    String listType,
+    int loop,
+    int modestbranding,
+    int origin,
+    List<String> playlist,
+    int playsinline,
     int rel,
+    int showinfo,
+    int start,
   });
 }
 
 @JS()
 @anonymous
+
 /// https://developers.google.com/youtube/iframe_api_reference#Queueing_Functions
 class VideoByIdParams {
   external factory VideoByIdParams(
@@ -147,6 +158,7 @@ class VideoByIdParams {
 
 @JS()
 @anonymous
+
 /// https://developers.google.com/youtube/iframe_api_reference#Queueing_Functions
 class VideoByUrlParams {
   external factory VideoByUrlParams({
@@ -165,6 +177,7 @@ typedef void EventHandler(EventArgs eventArgs);
 
 @JS()
 @anonymous
+
 /// https://developers.google.com/youtube/iframe_api_reference
 class Events {
   external EventHandler get onReady;
@@ -182,7 +195,6 @@ class Events {
   });
 }
 
-
 @JS()
 @anonymous
 class EventArgs {
@@ -190,8 +202,6 @@ class EventArgs {
   external dynamic get data;
   external factory EventArgs({Player target, dynamic data});
 }
-
-
 
 class YTQuality {
   static const small = 'small'; // 320*240
