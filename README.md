@@ -17,7 +17,6 @@ The simplest example
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
     <title>youtube iframe interop</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
@@ -44,7 +43,7 @@ void onYouTubeIframeAPIReady() {
   final options = new yt.PlayerOptions(
     height: '360',
     width: '480',
-    videoId: 'M7lc1UVf-VE',
+    videoId: 'JXcNqXbCa0E',
   );
   final player = new yt.Player('video', options);
 }
@@ -52,12 +51,13 @@ void onYouTubeIframeAPIReady() {
 
 ## API
 
-- [player](https://developers.google.com/youtube/iframe_api_reference?hl=fr#Functions)
-- [playerVars]()
+- [player](https://developers.google.com/youtube/iframe_api_reference)
+- [playerVars](https://developers.google.com/youtube/player_parameters)
 
 ### Events
 
 - onReady
 - onStateChange
 - onPlaybackQualityChange
+- onPlaybackRateChange
 - onError
