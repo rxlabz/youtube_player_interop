@@ -2,6 +2,8 @@
 
 A [Youtube iFrame API](https://developers.google.com/youtube/player_parameters) wrapper for Dart web apps
 
+For Angular Dart apps see the [Youtube iFrame Component](https://github.com/rxlabz/angular_youtube_iframe)
+
 ## Example
 
 [Example](https://rxlabz.github.io/youtube_player_interop)

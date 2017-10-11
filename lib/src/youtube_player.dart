@@ -212,3 +212,33 @@ class YTQuality {
   static const highres = 'highres'; // > 1920*1080
   static const auto = 'default';
 }
+
+/// -1 not started , 0 stopped , 1 playing, 2 paused, 3, buffering, 5 queued
+enum PlayerState{
+  notStarted, stopped, playing, paused, buffering, queued
+}
+
+PlayerState stateFromInt(int value){
+  switch (value) {
+    case -1:
+      return PlayerState.notStarted;
+      break;
+    case 0:
+      return PlayerState.stopped;
+      break;
+    case 1:
+      return PlayerState.playing;
+      break;
+    case 2:
+      return PlayerState.paused;
+      break;
+    case 3:
+      return PlayerState.buffering;
+      break;
+    case 5:
+      return PlayerState.queued;
+      break;
+    default:
+
+  }
+}
