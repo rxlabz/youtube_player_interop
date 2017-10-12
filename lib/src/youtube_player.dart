@@ -213,12 +213,38 @@ class YTQuality {
   static const auto = 'default';
 }
 
-/// -1 not started , 0 stopped , 1 playing, 2 paused, 3, buffering, 5 queued
-enum PlayerState{
-  notStarted, stopped, playing, paused, buffering, queued
+enum YTPlayerError {
+  invalidId,
+  notAvailableInHTML5,
+  notFound,
+  notAvailableInEmbeddedPlayer,
+  none
 }
 
-PlayerState stateFromInt(int value){
+YTPlayerError getError(int errorCode) {
+  switch (errorCode) {
+    case 2:
+      return YTPlayerError.invalidId;
+      break;
+    case 5:
+      return YTPlayerError.notAvailableInHTML5;
+      break;
+    case 100:
+      return YTPlayerError.notFound;
+      break;
+    case 101:
+    case 150:
+      return YTPlayerError.notAvailableInEmbeddedPlayer;
+      break;
+    default:
+      return YTPlayerError.none;
+  }
+}
+
+/// -1 not started , 0 stopped , 1 playing, 2 paused, 3, buffering, 5 queued
+enum PlayerState { notStarted, stopped, playing, paused, buffering, queued }
+
+PlayerState stateFromInt(int value) {
   switch (value) {
     case -1:
       return PlayerState.notStarted;
@@ -239,6 +265,6 @@ PlayerState stateFromInt(int value){
       return PlayerState.queued;
       break;
     default:
-
+      return PlayerState.notStarted;
   }
 }
